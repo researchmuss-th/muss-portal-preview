@@ -78,6 +78,44 @@
 
 
 /* ธีมจากหน้า Home ของ MUSS: Sarabun, navy, cyan และการ์ดขาว */
+.entry-home{padding:35px 0 55px}
+.entry-welcome{position:relative;isolation:isolate;overflow:clip;background:linear-gradient(118deg,#0F3A68,#13497F 52%,#0C2E54);border-radius:20px;padding:30px 36px;color:#fff}
+.entry-welcome .eyebrow{font-size:11px;color:#A7F0FC;margin-bottom:10px}
+.entry-welcome h1{font-size:33px;font-weight:700;line-height:1.55;letter-spacing:0;color:#fff;margin:0 0 9px}
+.entry-welcome>p:last-of-type{font-size:16px;color:#E4F3FF;margin:0;line-height:1.8}
+.entry-welcome-icon{position:absolute;z-index:-1;right:36px;top:18px;width:150px;height:150px;color:#B4F3FC10;transform:rotate(-7deg)}
+.entry-welcome-icon svg{width:100%;height:100%}
+.entry-heading{margin:30px 0 21px}
+.entry-heading h2{font-size:25px;font-weight:700;color:#0F3A68;margin:0 0 6px}
+.entry-heading h2:before{content:'';display:inline-block;vertical-align:-2px;width:4px;height:24px;margin-right:11px;border-radius:4px;background:#06B6D4}
+.entry-heading p{font-size:16px;color:#536779;margin:0}
+.entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+.entry-card{position:relative;display:flex;flex-direction:column;overflow:clip;background:#fff;border:1px solid #CCDCE8;border-radius:16px;padding:28px 30px;color:#16304B;box-shadow:0 5px 18px #0F3A6808;transition:transform .2s,border-color .2s,box-shadow .2s}
+.entry-card:before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#06B6D4,#1C5494,#51CDE1)}
+.entry-card:hover{transform:translateY(-3px);border-color:#278AA7;box-shadow:0 10px 28px #0F3A6816}
+.entry-card-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:21px}
+.entry-icon{display:grid;place-items:center;width:53px;height:53px;color:#076780;background:#DDF5FA;border:1px solid #BBDDE6;border-radius:13px}
+.entry-icon svg{width:29px;height:29px}
+.entry-index{font:600 10px Manrope,sans-serif;letter-spacing:1px;color:#536779}
+.entry-card .eyebrow{font-size:10px;margin-bottom:8px;color:#076780}
+.entry-card h3{font-size:27px;font-weight:700;line-height:1.55;color:#0F3A68;margin:0 0 10px;max-width:440px}
+.entry-card>p:not(.eyebrow){font-size:16px;line-height:1.8;color:#536779;margin:0 0 14px}
+.entry-card ul{padding-left:20px;margin:0 0 25px;font-size:15px;line-height:1.9;color:#37516A}
+.entry-card li::marker{color:#076780}
+.entry-action{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;border-radius:7px;background:#0F3A68;color:#fff;padding:13px 17px;font-size:15px;font-weight:600;line-height:1.8}
+.entry-action>span{flex-shrink:0;font-family:Manrope,sans-serif;font-size:19px}
+.entry-card:hover .entry-action{background:#1C5494}
+.portal-context{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:22px 0;font-size:14px}
+.portal-context>a{color:#0F3A68;font-weight:600}
+.portal-context>span{color:#536779;background:#E5F1F9;border:1px solid #C3D6E7;padding:4px 12px;border-radius:5px}
+.featured-grid.single-service{grid-template-columns:1fr}
+.single-service .featured-card{min-height:0;display:grid;grid-template-columns:1fr auto;gap:0 35px;align-items:center}
+.single-service .featured-top{grid-column:1/-1;margin-bottom:19px}
+.single-service .featured-copy{grid-column:1}
+.single-service .featured-card .button{grid-column:2;grid-row:2;margin:0;align-self:end;margin-bottom:25px}
+.single-service .featured-watermark{display:none}
+@media(max-width:800px){.entry-welcome{padding:28px}.entry-welcome h1{font-size:29px}.entry-card{padding:26px}.entry-card h3{font-size:25px}.entry-action{font-size:14px;padding:12px 14px}.single-service .featured-card{display:flex;align-items:flex-start}.single-service .featured-card .button{margin:0;align-self:flex-start;min-width:0;width:auto}.entry-grid{gap:18px}.portal-context{font-size:13px}}
+@media(max-width:600px){.entry-home{padding:25px 0 35px}.entry-welcome{padding:26px 24px;border-radius:16px}.entry-welcome h1{font-size:28px}.entry-welcome>p:last-of-type{font-size:15px}.entry-welcome .eyebrow{font-size:10px;letter-spacing:1px}.entry-welcome-icon{right:-15px}.entry-heading{margin:27px 0 20px}.entry-heading h2{font-size:24px}.entry-heading p{font-size:15px}.entry-grid{grid-template-columns:1fr;gap:20px}.entry-card{padding:25px}.entry-card h3{font-size:26px}.entry-card>p:not(.eyebrow){font-size:16px}.entry-card ul{font-size:15px}.entry-action{font-size:15px}.portal-context{flex-wrap:wrap;gap:12px;padding-top:20px}.portal-context>span{font-size:12px}.single-service .featured-card .button{width:100%}}
 :root{
  --navy:#0F3A68;--navy-dark:#0A1F42;--blue:#1C5494;
  --gold:#06B6D4;--text:#16304B;--muted:#536779;
@@ -334,25 +372,72 @@ const STEPS = [
  {title:'ดำเนินการเก็บข้อมูลวิจัย',owner:'ฝ่ายวิจัย',description:'ประสานฝ่ายวิจัยเพื่อดำเนินการเก็บข้อมูล และขอรับบริการเครื่องมือวิจัยที่เกี่ยวข้อง',items:['การบริการเครื่องมือวิจัย','ตรวจสอบระเบียบการจองใช้เครื่องมือก่อนยื่นคำขอ'],service:'equipment',link:'บริการเครื่องมือวิจัย / ระเบียบการจอง'}
 ];
 let selectedAudience = 'all';
+let currentPortal = null;
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 let dialogTrigger;
 const groups = document.getElementById('service-groups');
 const search = document.getElementById('search');
 const dialog = document.getElementById('service-dialog');
+function allowedAudiences() {
+ return currentPortal === 'external' ? ['public'] : currentPortal === 'internal' ? ['faculty','student'] : [];
+}
+// ⚠️ แยกหน้าบริการตามกลุ่มผู้ใช้ ไม่เพิ่ม role และไม่ใช่ระบบยืนยันตัวตน
+function renderRoute() {
+ const [route, section] = location.hash.slice(1).split('/');
+ const portal = route === 'external' || route === 'internal' ? route : 'home';
+ const changed = currentPortal !== portal;
+ currentPortal = portal;
+ if(changed){if(dialog.open)dialog.close();selectedAudience='all';search.value='';}
+ const home = portal === 'home';
+ const external = portal === 'external';
+ document.getElementById('entry-home').hidden = !home;
+ document.getElementById('service-portal').hidden = home;
+ const serviceNav = document.querySelector('[data-nav-services]');
+ const studentNav = document.querySelector('[data-nav-journey]');
+ const homeNav = document.querySelector('[data-nav-home]');
+ serviceNav.hidden = home;
+ serviceNav.href = external ? '#external/services' : '#internal/services';
+ studentNav.hidden = portal !== 'internal';
+ document.querySelector('.nav-cta').hidden = home;
+ document.querySelector('[data-back-top]').href = home ? '#home' : '#' + portal;
+ homeNav.classList.toggle('active',home);
+ serviceNav.classList.toggle('active',!home && section !== 'journey');
+ studentNav.classList.toggle('active',!home && section === 'journey');
+ [homeNav,serviceNav,studentNav].forEach(a=>{if(a.classList.contains('active'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ if(home){document.title='หน้าหลัก | MUSS Research Service Portal';window.scrollTo({top:0,behavior:'instant'});return;}
+ document.getElementById('portal-context-label').textContent = external ? 'บุคคลภายนอก' : 'คณาจารย์และนักศึกษา';
+ document.getElementById('featured-title').textContent = external ? 'บริการสำหรับบุคคลภายนอก' : 'บริการสำหรับคณาจารย์และนักศึกษา';
+ document.querySelector('.featured-heading>p:last-child').textContent = external ? 'บริการทดสอบสมรรถนะบุคคล และข้อมูลก่อนขอรับบริการ' : 'รวมทุน โครงการ เครื่องมือวิจัย และแนวทางการทำวิจัย';
+ document.querySelector('.featured-equipment').hidden = external;
+ document.querySelector('.featured-fitness').hidden = !external;
+ document.querySelector('.featured-grid').classList.add('single-service');
+ document.getElementById('services').hidden = external;
+ document.getElementById('journey').hidden = external;
+ const banner = document.querySelector('.support-banner');
+ banner.hidden = external;
+ document.getElementById('portal-service-count').textContent = '8';
+ renderServices();
+ document.title = (external ? 'บุคคลภายนอก' : 'คณาจารย์และนักศึกษา') + ' | MUSS Research Service Portal';
+ if(section === 'journey' && !external)document.getElementById('journey').scrollIntoView({behavior:'instant'});
+ else if(section === 'services')document.getElementById(external?'featured':'services').scrollIntoView({behavior:'instant'});
+ else window.scrollTo({top:0,behavior:'instant'});
+ if(changed)document.getElementById('featured-title').focus({preventScroll:true});
+}
 document.querySelectorAll('[data-icon]').forEach(el => {el.innerHTML = icon(el.dataset.icon);});
 function renderCard(s, headingLevel = 4) {
  return `<article class="service-card"><div class="card-top"><span class="card-icon ${s.category}">${icon(s.icon)}</span><span class="service-label ${s.existing?'':'new'}">${s.existing?'บริการเดิม':s.id==='student'?'แนวทางใหม่':'บริการใหม่'}</span></div><p class="card-category">${CATEGORIES[s.category]}</p><h${headingLevel} class="service-title">${s.title}</h${headingLevel}><p>${s.description}</p><button class="card-link" data-service="${s.id}" aria-label="ดูรายละเอียด ${s.title}">${s.id==='student'?'ดูเส้นทางการวิจัย':'ดูรายละเอียดบริการ'}<span aria-hidden="true">↗</span></button></article>`;
 }
 function renderServices() {
  const query = search.value.trim().toLocaleLowerCase('th');
- const shown = SERVICES.filter(s => (selectedAudience === 'all' || s.audience === selectedAudience) && `${s.title} ${s.description} ${s.keywords} ${AUDIENCES.find(a=>a.id===s.audience).title} ${CATEGORIES[s.category]}`.toLocaleLowerCase('th').includes(query));
+ const shown = SERVICES.filter(s => allowedAudiences().includes(s.audience) && (selectedAudience === 'all' || s.audience === selectedAudience) && `${s.title} ${s.description} ${s.keywords} ${AUDIENCES.find(a=>a.id===s.audience).title} ${CATEGORIES[s.category]}`.toLocaleLowerCase('th').includes(query));
  groups.innerHTML = AUDIENCES.map(a => {
   const items = shown.filter(s=>s.audience===a.id);
   if (!items.length) return '';
   const content = a.id==='faculty' ? ['funding','impact'].map((category,index)=>{
    const subset=items.filter(s=>s.category===category);
-   return subset.length ? `<section class="service-subgroup" aria-labelledby="subgroup-${category}"><h4 id="subgroup-${category}" class="subgroup-title"><span>2.${index+1}</span>${CATEGORIES[category]}</h4><div class="service-grid ${category==='funding'?'two-cards':''}">${subset.map(s=>renderCard(s,5)).join('')}</div></section>` : '';
+   return subset.length ? `<section class="service-subgroup" aria-labelledby="subgroup-${category}"><h4 id="subgroup-${category}" class="subgroup-title"><span>1.${index+1}</span>${CATEGORIES[category]}</h4><div class="service-grid ${category==='funding'?'two-cards':''}">${subset.map(s=>renderCard(s,5)).join('')}</div></section>` : '';
   }).join('') : `<div class="service-grid ${a.id==='public'?'public-cards':'two-cards'}">${items.map(s=>renderCard(s)).join('')}</div>`;
-  return `<section class="audience-section audience-${a.id}" aria-labelledby="audience-${a.id}"><div class="audience-heading"><span class="audience-number">${a.number}</span><div><h3 id="audience-${a.id}">${a.title}</h3><p>${a.description}</p></div><span class="audience-count">${items.length} รายการ</span></div>${content}</section>`;
+  return `<section class="audience-section audience-${a.id}" aria-labelledby="audience-${a.id}"><div class="audience-heading"><span class="audience-number">${a.id==='student'?'02':'01'}</span><div><h3 id="audience-${a.id}">${a.title}</h3><p>${a.description}</p></div><span class="audience-count">${items.length} รายการ</span></div>${content}</section>`;
  }).join('');
  document.getElementById('empty').hidden = shown.length > 0;
  document.getElementById('search-status').textContent = `พบบริการ ${shown.length} รายการ`;
@@ -367,7 +452,8 @@ search.addEventListener('input', renderServices);
 document.getElementById('reset-search').addEventListener('click', () => {search.value='';setAudience('all');search.focus();});
 function showService(id, trigger) {
  const s = SERVICES.find(item => item.id === id); if (!s) return;
- if (id === 'student') {document.getElementById('journey').scrollIntoView({behavior:'smooth'});document.getElementById('step-0').focus({preventScroll:true});return;}
+ if (!allowedAudiences().includes(s.audience)) return;
+ if (id === 'student') {location.hash='internal/journey';document.getElementById('journey').scrollIntoView({behavior:'smooth'});document.getElementById('step-0').focus({preventScroll:true});return;}
  dialogTrigger = trigger;
  // ⚠️ ต้นแบบไม่อ่านข้อมูลส่วนบุคคล ไม่รับคำขอ และไม่เขียนกลับระบบ A/B/C
  const details = s.existing ? `<p>${s.description}</p><ul class="detail-list"><li><strong>บริการ</strong><span>${s.id==='equipment'?'ขอใช้เครื่องมือวิจัย':'ขอรับการทดสอบสมรรถนะบุคคล'}</span></li><li><strong>${s.id==='equipment'?'ระเบียบการจอง':'ก่อนยื่นคำขอ'}</strong><span>${s.id==='equipment'?'ตรวจสอบระเบียบการจองใช้เครื่องมือในระบบบริการเดิมก่อนยื่นคำขอ':'ตรวจสอบรายละเอียดและเงื่อนไขในระบบบริการเดิม'}</span></li><li><strong>ตารางใช้งาน</strong><span>ตรวจสอบวันและเวลาจากปฏิทินบริการ</span></li></ul><div class="dialog-actions"><a class="button primary" href="${PORTAL_URL}" target="_blank" rel="noopener">เข้าสู่ระบบบริการเดิม ↗</a><a class="button secondary" href="${CALENDAR_URL}" target="_blank" rel="noopener">ดูปฏิทินบริการ ↗</a></div>` : `<div class="dialog-notice">บริการใหม่ในต้นแบบ · ยังไม่เปิดรับคำขอ</div><p>${s.description}</p><ul class="detail-list"><li><strong>หลักเกณฑ์</strong><span>รอประกาศและการยืนยันจากหน่วยงาน</span></li><li><strong>ผู้มีสิทธิ์</strong><span>จะระบุให้ชัดเจนตามหลักเกณฑ์ของบริการนี้</span></li><li><strong>เอกสาร</strong><span>จะเพิ่มรายการตรวจสอบและแบบฟอร์มที่ยืนยันแล้ว</span></li><li><strong>รอบรับสมัคร</strong><span>ยังไม่มีข้อมูลที่ยืนยัน</span></li></ul><p>เมื่อพร้อมเปิดบริการ หน้านี้จะรวมประกาศ ขั้นตอน เอกสาร และปุ่มยื่นคำขอไว้ในจุดเดียว</p><div class="dialog-actions"><button class="button primary" data-close>กลับไปเลือกบริการ</button></div>`;
@@ -390,7 +476,9 @@ function closeMenu(){navigation.classList.remove('open');menuButton.setAttribute
 menuButton.addEventListener('click',()=>{const open=navigation.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'ปิดเมนู':'เปิดเมนู');});
 navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&navigation.classList.contains('open')){closeMenu();menuButton.focus();}});
-renderServices();showStep(0);
+window.addEventListener('hashchange',()=>{closeMenu();renderRoute();});
+document.querySelector('.skip').addEventListener('click',event=>{event.preventDefault();const heading=document.getElementById(currentPortal==='home'?'entry-title':'featured-title');heading.focus();heading.scrollIntoView({block:'start',behavior:'instant'});});
+showStep(0);renderRoute();
 
 });</script>
 </head>
@@ -398,22 +486,34 @@ renderServices();showStep(0);
 <a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
 <div class="institution"><div class="wrap"><span>มหาวิทยาลัยมหิดล <span class="dot">•</span> วิทยาลัยวิทยาศาสตร์และเทคโนโลยีการกีฬา</span><span class="concept">ต้นแบบการออกแบบ</span></div></div>
 <header class="header"><div class="wrap nav">
-  <a class="brand" href="#" aria-label="MUSS หน้าแรก"><span class="brand-mark">M<span>U</span>SS<i></i></span><span class="brand-copy">RESEARCH &amp; INNOVATION<small>ศูนย์บริการและสนับสนุนการวิจัย</small></span></a>
+  <a class="brand" href="#home" aria-label="MUSS หน้าแรก"><span class="brand-mark">M<span>U</span>SS<i></i></span><span class="brand-copy">RESEARCH &amp; INNOVATION<small>ศูนย์บริการและสนับสนุนการวิจัย</small></span></a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="เปิดเมนู">☰</button>
-  <nav id="navigation" aria-label="เมนูหลัก"><a class="active" href="#main">หน้าแรก</a><a href="#services">บริการทั้งหมด</a><a href="#journey">คู่มือนักศึกษา</a></nav>
-  <a class="nav-cta" href="https://script.google.com/macros/s/AKfycbxKeQ9mH3kBdnv68it9yQkTEd4J9BosHXlWD3OTATOyQ6Cdt7_uzEU--tfsuJVCnmYrpQ/exec" target="_blank" rel="noopener">เข้าสู่บริการเดิม <span aria-hidden="true">↗</span></a>
+  <nav id="navigation" aria-label="เมนูหลัก"><a class="active" href="#home" data-nav-home aria-current="page">หน้าแรก</a><a href="#internal/services" data-nav-services hidden>บริการของกลุ่มนี้</a><a href="#internal/journey" data-nav-journey hidden>คู่มือนักศึกษา</a></nav>
+  <a class="nav-cta" hidden href="https://script.google.com/macros/s/AKfycbxKeQ9mH3kBdnv68it9yQkTEd4J9BosHXlWD3OTATOyQ6Cdt7_uzEU--tfsuJVCnmYrpQ/exec" target="_blank" rel="noopener">เข้าสู่บริการเดิม <span aria-hidden="true">↗</span></a>
 </div></header>
 <main id="main">
-<section class="featured-services" aria-labelledby="featured-title"><div class="wrap">
-  <div class="featured-heading"><p class="eyebrow">MUSS RESEARCH SERVICE PORTAL</p><h1 id="featured-title">บริการวิจัยและทดสอบสมรรถนะบุคคล</h1><p>เลือกบริการที่ต้องการ เพื่อดูรายละเอียดและเข้าสู่ระบบขอรับบริการ</p></div>
+<section class="entry-home" id="entry-home" aria-labelledby="entry-title">
+ <div class="wrap">
+  <div class="entry-welcome"><p class="eyebrow">MUSS RESEARCH SERVICE PORTAL</p><h1 id="entry-title" tabindex="-1">ศูนย์บริการและสนับสนุนการวิจัย</h1><p>วิทยาลัยวิทยาศาสตร์และเทคโนโลยีการกีฬา มหาวิทยาลัยมหิดล</p><span class="entry-welcome-icon" data-icon="activity"></span></div>
+  <div class="entry-heading"><h2>เลือกกลุ่มผู้ใช้ของคุณ</h2><p>เข้าสู่หน้าบริการที่ตรงกับการใช้งาน</p></div>
+  <div class="entry-grid">
+   <a class="entry-card" href="#external" aria-labelledby="external-entry-title"><div class="entry-card-top"><span class="entry-icon" data-icon="activity"></span><span class="entry-index">01 / EXTERNAL</span></div><p class="eyebrow">PUBLIC SERVICES</p><h3 id="external-entry-title">การใช้งานบุคคลภายนอก</h3><p>สำหรับผู้ขอรับบริการทดสอบสมรรถนะบุคคล</p><ul><li>บริการทดสอบสมรรถนะบุคคล</li><li>รายละเอียดและขั้นตอนการขอรับบริการ</li></ul><span class="entry-action">เข้าสู่บริการสำหรับบุคคลภายนอก <span aria-hidden="true">→</span></span></a>
+   <a class="entry-card" href="#internal" aria-labelledby="internal-entry-title"><div class="entry-card-top"><span class="entry-icon" data-icon="team"></span><span class="entry-index">02 / ACADEMIC</span></div><p class="eyebrow">ACADEMIC SERVICES</p><h3 id="internal-entry-title">การใช้งานสำหรับคณาจารย์และนักศึกษา</h3><p>บริการและการสนับสนุนตลอดเส้นทางการวิจัย</p><ul><li>ทุนวิจัย โครงการ และการเผยแพร่ผลงาน</li><li>เครื่องมือวิจัยและขั้นตอนสำหรับนักศึกษา</li></ul><span class="entry-action">เข้าสู่บริการสำหรับคณาจารย์และนักศึกษา <span aria-hidden="true">→</span></span></a>
+  </div>
+ </div>
+</section>
+<div id="service-portal" hidden>
+<div class="wrap portal-context"><a href="#home">← กลับหน้าเลือกกลุ่มผู้ใช้</a><span id="portal-context-label"></span></div>
+<section id="featured" class="featured-services" aria-labelledby="featured-title"><div class="wrap">
+  <div class="featured-heading"><p class="eyebrow">MUSS RESEARCH SERVICE PORTAL</p><h1 id="featured-title" tabindex="-1">บริการวิจัยและทดสอบสมรรถนะบุคคล</h1><p>เลือกบริการที่ต้องการ เพื่อดูรายละเอียดและเข้าสู่ระบบขอรับบริการ</p></div>
   <div class="featured-grid">
     <article class="featured-card featured-equipment"><div class="featured-top"><span class="featured-icon" data-icon="equipment"></span><span class="featured-tag">สำหรับนักศึกษา</span></div><div class="featured-copy"><p class="eyebrow">RESEARCH EQUIPMENT</p><h2>บริการเครื่องมือวิจัย</h2><p>วางแผนการใช้เครื่องมือ ตรวจสอบตารางการใช้งาน<br>และเตรียมยื่นคำขอใช้บริการสำหรับงานวิจัยของคุณ</p></div><button class="button gold" data-service="equipment">ดูบริการเครื่องมือวิจัย <span aria-hidden="true">↗</span></button><span class="featured-watermark" data-icon="equipment"></span></article>
     <article class="featured-card featured-fitness"><div class="featured-top"><span class="featured-icon" data-icon="activity"></span><span class="featured-tag">สำหรับบุคคลทั่วไป</span></div><div class="featured-copy"><p class="eyebrow">HUMAN PERFORMANCE TESTING</p><h2>บริการทดสอบสมรรถนะบุคคล</h2><p>ดูข้อมูลการทดสอบสมรรถภาพ และขั้นตอนการขอรับบริการ<br>เพื่อเตรียมความพร้อมก่อนเข้ารับการทดสอบ</p></div><button class="button primary" data-service="fitness">ดูบริการทดสอบสมรรถนะ <span aria-hidden="true">↗</span></button><span class="featured-watermark" data-icon="activity"></span></article>
   </div>
 </div></section>
 <section class="services wrap section" id="services">
-  <div class="section-heading"><div><p class="eyebrow">EXPLORE OUR SERVICES</p><h2>เลือกบริการตามกลุ่มผู้ใช้</h2><p>รวมบริการสำหรับบุคคลทั่วไป คณาจารย์ และนักศึกษาไว้ในที่เดียว</p></div><span class="service-count">9 <small>บริการและแนวทาง</small></span></div>
-  <div class="service-tools"><div class="filters" role="group" aria-label="กรองกลุ่มผู้ใช้"><button class="selected" data-audience="all" aria-pressed="true">ทั้งหมด</button><button data-audience="public" aria-pressed="false">บุคคลทั่วไป</button><button data-audience="faculty" aria-pressed="false">คณาจารย์</button><button data-audience="student" aria-pressed="false">นักศึกษา</button></div><label class="search"><span data-icon="search"></span><input type="search" id="search" placeholder="ค้นหาบริการ…" aria-label="ค้นหาบริการ"></label></div>
+  <div class="section-heading"><div><p class="eyebrow">EXPLORE OUR SERVICES</p><h2>บริการสำหรับคณาจารย์และนักศึกษา</h2><p>เลือกดูทุน โครงการ เครื่องมือวิจัย และแนวทางการทำวิจัย</p></div><span class="service-count"><span id="portal-service-count">8</span> <small>บริการและแนวทาง</small></span></div>
+  <div class="service-tools"><div class="filters" role="group" aria-label="กรองกลุ่มผู้ใช้"><button class="selected" data-audience="all" aria-pressed="true">ทั้งหมด</button><button data-audience="faculty" aria-pressed="false">คณาจารย์</button><button data-audience="student" aria-pressed="false">นักศึกษา</button></div><label class="search"><span data-icon="search"></span><input type="search" id="search" placeholder="ค้นหาบริการ…" aria-label="ค้นหาบริการ"></label></div>
   <p id="search-status" class="sr-only" aria-live="polite"></p><div class="service-groups" id="service-groups"></div><div class="empty" id="empty" hidden><h3>ยังไม่พบบริการที่ค้นหา</h3><p>ลองใช้คำว่า “ทุน” “ตีพิมพ์” หรือเลือกดูบริการทั้งหมด</p><button id="reset-search" class="button primary">ดูบริการทั้งหมด</button></div>
   <p class="prototype-note"><span aria-hidden="true">ⓘ</span> บริการใหม่เป็นส่วนหนึ่งของต้นแบบ รายละเอียดหลักเกณฑ์ เอกสาร และรอบรับสมัครจะเพิ่มเมื่อได้รับการยืนยัน</p>
 </section>
@@ -421,9 +521,10 @@ renderServices();showStep(0);
   <div class="journey-heading"><div><p class="eyebrow">A CLEAR PATH FORWARD</p><h2>เส้นทางวิจัยของนักศึกษาหลังปริญญา</h2><p>ขั้นตอนหลังสอบหัวข้อวิทยานิพนธ์ (Thesis Proposal) พร้อมหน่วยงานที่ประสานในแต่ละช่วง</p></div><span class="outline-tag">หลังสอบ Thesis Proposal</span></div>
   <div class="journey-layout"><div class="journey-intro"><span class="journey-number">STEP BY STEP</span><h3>หลังสอบหัวข้อ<br>วิทยานิพนธ์</h3><p>3 ขั้นตอนหลัก ตั้งแต่ขอ IRB ขออนุมัติโครงการ ไปจนถึงการเก็บข้อมูลวิจัย</p><div class="journey-symbol" data-icon="book"></div></div><div class="journey-content"><div class="journey-tabs" role="tablist" aria-label="ขั้นตอนหลังสอบ Thesis Proposal"><button role="tab" id="step-0" aria-controls="step-panel" aria-selected="true" tabindex="0" data-step="0"><b>01</b><span>ขอ IRB</span></button><button role="tab" id="step-1" aria-controls="step-panel" aria-selected="false" tabindex="-1" data-step="1"><b>02</b><span>ขออนุมัติโครงการ</span></button><button role="tab" id="step-2" aria-controls="step-panel" aria-selected="false" tabindex="-1" data-step="2"><b>03</b><span>เก็บข้อมูลวิจัย</span></button></div><div id="step-panel" role="tabpanel" aria-labelledby="step-0" tabindex="0"></div></div></div>
 </div></section>
-<section class="wrap support-banner"><div><p class="eyebrow">RESEARCH STARTS WITH A CONNECTION</p><h2>พร้อมเริ่มต้นก้าวต่อไปของงานวิจัย?</h2><p>เลือกบริการที่ใช่ แล้วต่อยอดแนวคิดของคุณ</p></div><a class="button gold" href="#services">สำรวจบริการทั้งหมด <span aria-hidden="true">↗</span></a></section>
+<section class="wrap support-banner"><div><p class="eyebrow">RESEARCH STARTS WITH A CONNECTION</p><h2>พร้อมเริ่มต้นก้าวต่อไปของงานวิจัย?</h2><p>เลือกบริการที่ใช่ แล้วต่อยอดแนวคิดของคุณ</p></div><a class="button gold" href="#internal/services">สำรวจบริการทั้งหมด <span aria-hidden="true">↗</span></a></section>
+</div>
 </main>
-<footer><div class="wrap footer-main"><div><a class="footer-brand" href="#">MUSS <span>RESEARCH &amp; INNOVATION</span></a><p>วิทยาลัยวิทยาศาสตร์และเทคโนโลยีการกีฬา<br>มหาวิทยาลัยมหิดล</p></div><div><strong>ลิงก์ที่เกี่ยวข้อง</strong><a href="https://sites.google.com/view/muss-research-service-portal/" target="_blank" rel="noopener">เว็บไซต์บริการปัจจุบัน ↗</a><a href="https://sites.google.com/view/muss-research-service-portal/privacy-policy" target="_blank" rel="noopener">นโยบายความเป็นส่วนตัว ↗</a></div><div class="footer-note"><strong>ออกแบบเพื่อการเติบโตของงานวิจัย</strong><p>ต้นแบบหน้าตาเว็บไซต์ • ยังไม่รับคำขอทุน<br>ข้อมูลขั้นตอนและบริการใหม่รอการยืนยัน</p></div></div><div class="wrap footer-bottom"><span>MUSS Research Service Portal</span><span>บริการวิจัย · ทุน · ผลงาน · องค์ความรู้</span><a href="#">กลับด้านบน ↑</a></div></footer>
+<footer><div class="wrap footer-main"><div><a class="footer-brand" href="#home">MUSS <span>RESEARCH &amp; INNOVATION</span></a><p>วิทยาลัยวิทยาศาสตร์และเทคโนโลยีการกีฬา<br>มหาวิทยาลัยมหิดล</p></div><div><strong>ลิงก์ที่เกี่ยวข้อง</strong><a href="https://sites.google.com/view/muss-research-service-portal/" target="_blank" rel="noopener">เว็บไซต์บริการปัจจุบัน ↗</a><a href="https://sites.google.com/view/muss-research-service-portal/privacy-policy" target="_blank" rel="noopener">นโยบายความเป็นส่วนตัว ↗</a></div><div class="footer-note"><strong>ออกแบบเพื่อการเติบโตของงานวิจัย</strong><p>ต้นแบบหน้าตาเว็บไซต์ • ยังไม่รับคำขอทุน<br>ข้อมูลขั้นตอนและบริการใหม่รอการยืนยัน</p></div></div><div class="wrap footer-bottom"><span>MUSS Research Service Portal</span><span>บริการวิจัย · ทุน · ผลงาน · องค์ความรู้</span><a href="#home" data-back-top>กลับด้านบน ↑</a></div></footer>
 <dialog id="service-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow">SERVICE INFORMATION</span><button class="close-dialog" aria-label="ปิดรายละเอียด">×</button></div><div id="dialog-content"></div></dialog>
 </body></html>
 
