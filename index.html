@@ -456,7 +456,7 @@ function showService(id, trigger) {
  if (id === 'student') {location.hash='internal/journey';document.getElementById('journey').scrollIntoView({behavior:'smooth'});document.getElementById('step-0').focus({preventScroll:true});return;}
  dialogTrigger = trigger;
  // ⚠️ ต้นแบบไม่อ่านข้อมูลส่วนบุคคล ไม่รับคำขอ และไม่เขียนกลับระบบ A/B/C
- const details = s.existing ? `<p>${s.description}</p><ul class="detail-list"><li><strong>บริการ</strong><span>${s.id==='equipment'?'ขอใช้เครื่องมือวิจัย':'ขอรับการทดสอบสมรรถนะบุคคล'}</span></li><li><strong>${s.id==='equipment'?'ระเบียบการจอง':'ก่อนยื่นคำขอ'}</strong><span>${s.id==='equipment'?'ตรวจสอบระเบียบการจองใช้เครื่องมือในระบบบริการเดิมก่อนยื่นคำขอ':'ตรวจสอบรายละเอียดและเงื่อนไขในระบบบริการเดิม'}</span></li><li><strong>ตารางใช้งาน</strong><span>ตรวจสอบวันและเวลาจากปฏิทินบริการ</span></li></ul><div class="dialog-actions"><a class="button primary" href="${PORTAL_URL}" target="_blank" rel="noopener">เข้าสู่ระบบบริการเดิม ↗</a><a class="button secondary" href="${CALENDAR_URL}" target="_blank" rel="noopener">ดูปฏิทินบริการ ↗</a></div>` : `<div class="dialog-notice">บริการใหม่ในต้นแบบ · ยังไม่เปิดรับคำขอ</div><p>${s.description}</p><ul class="detail-list"><li><strong>หลักเกณฑ์</strong><span>รอประกาศและการยืนยันจากหน่วยงาน</span></li><li><strong>ผู้มีสิทธิ์</strong><span>จะระบุให้ชัดเจนตามหลักเกณฑ์ของบริการนี้</span></li><li><strong>เอกสาร</strong><span>จะเพิ่มรายการตรวจสอบและแบบฟอร์มที่ยืนยันแล้ว</span></li><li><strong>รอบรับสมัคร</strong><span>ยังไม่มีข้อมูลที่ยืนยัน</span></li></ul><p>เมื่อพร้อมเปิดบริการ หน้านี้จะรวมประกาศ ขั้นตอน เอกสาร และปุ่มยื่นคำขอไว้ในจุดเดียว</p><div class="dialog-actions"><button class="button primary" data-close>กลับไปเลือกบริการ</button></div>`;
+ const details = s.existing ? `<p>${s.description}</p><ul class="detail-list"><li><strong>บริการ</strong><span>${s.id==='equipment'?'ขอใช้เครื่องมือวิจัย':'ขอรับการทดสอบสมรรถนะบุคคล'}</span></li><li><strong>${s.id==='equipment'?'ระเบียบการจอง':'ก่อนยื่นคำขอ'}</strong><span>${s.id==='equipment'?'ตรวจสอบระเบียบการจองใช้เครื่องมือในระบบบริการเดิมก่อนยื่นคำขอ':'ตรวจสอบรายละเอียดและเงื่อนไขในระบบบริการเดิม'}</span></li><li><strong>ตารางใช้งาน</strong><span>ตรวจสอบวันและเวลาจากปฏิทินบริการ</span></li></ul><div class="dialog-actions"><a class="button primary" href="${PORTAL_URL}" target="_blank" rel="noopener">ขอรับบริการ ↗</a><a class="button secondary" href="${CALENDAR_URL}" target="_blank" rel="noopener">ดูปฏิทินบริการ ↗</a></div>` : `<div class="dialog-notice">บริการใหม่ในต้นแบบ · ยังไม่เปิดรับคำขอ</div><p>${s.description}</p><ul class="detail-list"><li><strong>หลักเกณฑ์</strong><span>รอประกาศและการยืนยันจากหน่วยงาน</span></li><li><strong>ผู้มีสิทธิ์</strong><span>จะระบุให้ชัดเจนตามหลักเกณฑ์ของบริการนี้</span></li><li><strong>เอกสาร</strong><span>จะเพิ่มรายการตรวจสอบและแบบฟอร์มที่ยืนยันแล้ว</span></li><li><strong>รอบรับสมัคร</strong><span>ยังไม่มีข้อมูลที่ยืนยัน</span></li></ul><p>เมื่อพร้อมเปิดบริการ หน้านี้จะรวมประกาศ ขั้นตอน เอกสาร และปุ่มยื่นคำขอไว้ในจุดเดียว</p><div class="dialog-actions"><button class="button primary" data-close>กลับไปเลือกบริการ</button></div>`;
  document.getElementById('dialog-content').innerHTML = `<div class="card-icon dialog-icon ${s.category}">${icon(s.icon)}</div><p class="card-category">${CATEGORIES[s.category]}</p><h2 id="dialog-title">${s.title}</h2>${details}`;
  dialog.showModal();
 }
@@ -480,6 +480,7 @@ window.addEventListener('hashchange',()=>{closeMenu();renderRoute();});
 document.querySelector('.skip').addEventListener('click',event=>{event.preventDefault();const heading=document.getElementById(currentPortal==='home'?'entry-title':'featured-title');heading.focus();heading.scrollIntoView({block:'start',behavior:'instant'});});
 showStep(0);renderRoute();
 
+
 });</script>
 </head>
 <body>
@@ -489,7 +490,7 @@ showStep(0);renderRoute();
   <a class="brand" href="#home" aria-label="MUSS หน้าแรก"><span class="brand-mark">M<span>U</span>SS<i></i></span><span class="brand-copy">RESEARCH &amp; INNOVATION<small>ศูนย์บริการและสนับสนุนการวิจัย</small></span></a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="เปิดเมนู">☰</button>
   <nav id="navigation" aria-label="เมนูหลัก"><a class="active" href="#home" data-nav-home aria-current="page">หน้าแรก</a><a href="#internal/services" data-nav-services hidden>บริการของกลุ่มนี้</a><a href="#internal/journey" data-nav-journey hidden>คู่มือนักศึกษา</a></nav>
-  <a class="nav-cta" hidden href="https://script.google.com/macros/s/AKfycbxKeQ9mH3kBdnv68it9yQkTEd4J9BosHXlWD3OTATOyQ6Cdt7_uzEU--tfsuJVCnmYrpQ/exec" target="_blank" rel="noopener">เข้าสู่บริการเดิม <span aria-hidden="true">↗</span></a>
+  <a class="nav-cta" hidden href="https://script.google.com/macros/s/AKfycbxKeQ9mH3kBdnv68it9yQkTEd4J9BosHXlWD3OTATOyQ6Cdt7_uzEU--tfsuJVCnmYrpQ/exec" target="_blank" rel="noopener">ขอรับบริการ <span aria-hidden="true">↗</span></a>
 </div></header>
 <main id="main">
 <section class="entry-home" id="entry-home" aria-labelledby="entry-title">
@@ -527,6 +528,7 @@ showStep(0);renderRoute();
 <footer><div class="wrap footer-main"><div><a class="footer-brand" href="#home">MUSS <span>RESEARCH &amp; INNOVATION</span></a><p>วิทยาลัยวิทยาศาสตร์และเทคโนโลยีการกีฬา<br>มหาวิทยาลัยมหิดล</p></div><div><strong>ลิงก์ที่เกี่ยวข้อง</strong><a href="https://sites.google.com/view/muss-research-service-portal/" target="_blank" rel="noopener">เว็บไซต์บริการปัจจุบัน ↗</a><a href="https://sites.google.com/view/muss-research-service-portal/privacy-policy" target="_blank" rel="noopener">นโยบายความเป็นส่วนตัว ↗</a></div><div class="footer-note"><strong>ออกแบบเพื่อการเติบโตของงานวิจัย</strong><p>ต้นแบบหน้าตาเว็บไซต์ • ยังไม่รับคำขอทุน<br>ข้อมูลขั้นตอนและบริการใหม่รอการยืนยัน</p></div></div><div class="wrap footer-bottom"><span>MUSS Research Service Portal</span><span>บริการวิจัย · ทุน · ผลงาน · องค์ความรู้</span><a href="#home" data-back-top>กลับด้านบน ↑</a></div></footer>
 <dialog id="service-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow">SERVICE INFORMATION</span><button class="close-dialog" aria-label="ปิดรายละเอียด">×</button></div><div id="dialog-content"></div></dialog>
 </body></html>
+
 
 
 
